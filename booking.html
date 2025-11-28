@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Page</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles4.css" >
+</head>
+<body>
+    <div class="Logo-container">
+               <img class="Logo" src="CSS/Photos/Logo.jpeg" alt="LOGO">
+            </div>
+
+<div class="Booking">
+
+    
+    <div class="section">
+        <h2>Select Services</h2>
+
+        <div class="service-toggle" data-target="srv1">Land-Based</div>
+        <div class="service-toggle" data-target="srv2">Water-Based</div>
+        <div class="service-toggle" data-target="srv3">Rope-Based</div>
+
+        
+        <div id="srv1" class="service-options">
+            <p>Hillwalking</p>
+            <p>Archery</p>
+            <p>Orienteering</p>
+            <p>Axe Throwing</p>
+        </div>
+
+        <div id="srv2" class="service-options">
+            <p>Kayaking</p>
+            <p>Canoeing</p>
+            <p>Powerboating</p>
+        </div>
+
+        <div id="srv3" class="service-options">
+            <p>Climbing</p>
+            <p>Pole Climb</p>
+            <p>Abseiling</p>
+        </div>
+    </div>
+
+    
+    <div class="section">
+        <h2>Select Date</h2>
+        <input type="date" class="date-input">
+    </div>
+
+
+    <div class="section">
+        <h2>Select Time</h2>
+        <div class="time-grid">
+            <div class="time-cell">09:00</div>
+            <div class="time-cell">10:00</div>
+            <div class="time-cell">11:00</div>
+            <div class="time-cell">12:00</div>
+            <div class="time-cell">13:00</div>
+            <div class="time-cell">14:00</div>
+            <div class="time-cell">15:00</div>
+            <div class="time-cell">16:00</div>
+        </div>
+    </div>
+
+</div>
+
+<div id="booking-box" class="booking-box">
+    <h3>Booking Summary</h3>
+
+    <p><strong>Service:</strong> <span id="sumService">-</span></p>
+    <p><strong>Activity:</strong> <span id="sumActivity">-</span></p>
+    <p><strong>Date:</strong> <span id="sumDate">-</span></p>
+    <p><strong>Time:</strong> <span id="sumTime">-</span></p>
+
+    <button id="confirmBtn" disabled class="confirm-btn">Confirm Booking</button>
+</div>
+
+
+<div class="review-button" onclick="toggleReviews()">
+    ⭐ Customer Comments
+</div>
+
+
+<div id="reviews-popup" class="reviews-popup">
+    <h3>Customer Comments</h3>
+
+        <div class="review-item">
+        <p>“Five stars, it was great.”</p>
+        <span>— Joe, aged 14</span>
+    </div>
+
+    <div class="review-item">
+        <p>“I was really scared about the abseiling but the instructor Mike was really encouraging and helped me do it, thanks Mike.”</p>
+        <span>— Sophie, aged 10</span>
+    </div>
+
+   
+
+    <button class="close-btn" onclick="toggleReviews()">Close</button>
+</div>
+
+<div class="hyper">
+<p>Learn more about outdoor learning programmes at:</p>
+</div>
+
+<div class="hyper1">
+    <a href="https://www.outdoor-learning.org" target="_blank">
+        Institute for Outdoor Learning
+    </a>
+</div>
+            
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="ouractivities.html">OUR ACTIVITIES</a></li>
+                <li><a href="contactus.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <img class="pic1" src="CSS/LochQuarry/4.avif" alt="Climbing">
+        <img class="pic2" src="CSS/LochQuarry/5.avif" alt="Powerboating">
+        <img class="pic3" src="CSS/LochQuarry/6.avif" alt="Hillwalking">
+
+        <div class="a2">
+    <a class="Previous" href="ouractivities.html">Previous</a>
+    <a class="Next" href="contactus.html">Next</a>
+   </div>
+
+
+
+<script>
+let selectedService = null;
+let selectedActivity = null;
+let selectedTime = null;
+let selectedDate = null;
+
+function updateSummary() {
+    document.getElementById("sumService").textContent = selectedService || "-";
+    document.getElementById("sumActivity").textContent = selectedActivity || "-";
+    document.getElementById("sumTime").textContent = selectedTime || "-";
+    document.getElementById("sumDate").textContent = selectedDate || "-";
+
+    const btn = document.getElementById("confirmBtn");
+
+    if (selectedService && selectedActivity && selectedTime && selectedDate) {
+        btn.disabled = false;
+    } else {
+        btn.disabled = true;
+    }
+}
+
+
+document.querySelectorAll(".service-toggle").forEach(box => {
+    box.addEventListener("click", () => {
+        const target = document.getElementById(box.dataset.target);
+
+        selectedService = box.textContent.trim();
+        selectedActivity = null;
+        updateSummary();
+
+        document.querySelectorAll(".service-options").forEach(o => o.classList.remove("active"));
+        target.classList.add("active");
+
+        target.querySelectorAll("p").forEach(p => p.classList.remove("selected"));
+    });
+});
+
+
+
+document.querySelectorAll(".service-options p").forEach(opt => {
+    opt.addEventListener("click", () => {
+        opt.parentElement.querySelectorAll("p").forEach(p => p.classList.remove("selected"));
+        opt.classList.add("selected");
+
+        selectedActivity = opt.textContent.trim();
+        updateSummary();
+    });
+});
+
+
+
+document.querySelectorAll(".time-cell").forEach(cell => {
+    cell.addEventListener("click", () => {
+        document.querySelectorAll(".time-cell").forEach(c => c.classList.remove("selected"));
+        cell.classList.add("selected");
+        selectedTime = cell.textContent.trim();
+        updateSummary();
+    });
+});
+
+
+document.querySelector(".date-input").addEventListener("change", (e) => {
+    selectedDate = e.target.value;
+    updateSummary();
+});
+
+
+document.getElementById("confirmBtn").addEventListener("click", () => {
+    if (!confirmBtn.disabled) {
+        window.location.href = "booking-done.html";
+    }
+});
+</script>
+
+<script>
+function toggleReviews() {
+    const popup = document.getElementById("reviews-popup");
+    popup.style.display = (popup.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us Page</title>
+    <link href="CSS/styles2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div>
+        <div class="logo-container">
+            <img class="Logo" src="CSS/Photos/Logo.jpeg" alt="LOGO">
+        </div>
+        <!--This is center part-->
+        <h3 class="h3">Our Center</h3>
+        <p class="Center">Lochquarry Outdoor Centre is set in acres of land in the heart of the majestic Argyll hills.<br>
+        On our doorstep is not only magnificent scenery,<br>but also a breath-taking selection of outdoor and adventurous activities.
+        <br>With activities designed to meet the needs of all ages and experiences of young people,<br>Lochquarry truly brings adventure to everyone.
+        <br>Activities on offer at Lochquarry include:<br>Land Based(Hillwalking,Archery,Orienteering,Axe throwing)
+        <br>Water Based(Kayaking,Canoeing,Powerboating)<br>Rope Based(Climbing,Abseiling,Pole climbing)<br>
+    </p>
+    <div>
+        <h3 class="h32">Our Staff</h3>
+        <p class="staff">Each activity is run under the instruction of<br> one of our highly trained staff and all safety equipment is provided.<br>
+            <br>Let’s meet some of the Lochquarry staff:<br>
+</p>
+<!--This is staff part-->
+<div class="Cards">
+<div class="staffs-card">
+    <h3>Name: Claire Jack</h3>
+    <p> Position: Centre Manager
+Responsible for: The overall running of the centre and all of its activities
+Favourite Activity: Pole climb</p>
+</div>
+
+    
+        <div class="staffs-card">
+            <h3>Name: Robbie Elliot</h3>
+            <p> Position: Senior Instructor (Land)
+Responsible for: Overseeing all of the land based activities
+Favourite Activity: Hillwalking in the beautiful Scottish highlands</p>
+        </div>
+
+        <div class="staffs-card">
+            <h3>Name: Marion Hunter</h3>
+            <p>Position: Centre Administrator
+Responsible for: Making bookings and arranging activity slots for groups
+Favourite Activity: Making sure everyone has a great time when visit the 
+Lochquarry</p>
+        </div>
+
+</div>
+    </div>
+
+ <div>
+
+<div class="review-button" onclick="toggleReviews()">
+    ⭐ Customer Comments
+</div>
+
+
+<div id="reviews-popup" class="reviews-popup">
+    <h3>Customer Comments</h3>
+
+    <div class="review-item">
+        <p>“We had a great time and loved all the different activities that we did.”</p>
+        <span>— 8th Gourock Guides</span>
+    </div>
+
+    <div class="review-item">
+        <p>“The Scouts loved every second of it, especially the powerboating.”</p>
+        <span>— Martin Bainbridge, Scout Leader</span>
+    </div>
+
+
+    <button class="close-btn" onclick="toggleReviews()">Close</button>
+</div>
+
+<div>
+    <p class="hyper">For more information about outdoor activities in Scotland, visit:</p>
+</div>
+<div class="hyper1">
+    <a href="https://www.visitscotland.com" target="_blank">
+        Visit Scotland – Outdoor Activities</a>
+</div>
+
+            <!--This is navigation bar-->
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="ouractivities.html">ACTIVITIES</a></li>
+                <li><a href="booking.html">BOOKING</a></li>
+                <li><a href="contactus.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <img class="Staff1" src="CSS/Claire_Jack.jpeg" alt="Staff">
+        <img class="Staff2" src="CSS/Robbie_Elliot.jpeg" alt="Staff">
+        <img class="Staff3" src="CSS/Marion_Hunter.jpg" alt="Staff"> 
+        <img class="center" src="CSS/Photos/center.png" alt="center">
+    </div>
+
+   <div class="a2">
+    <a class="Previous" href="index.html">Previous</a>
+    <a class="Next" href="ouractivities.html">Next</a>
+   </div>
+
+    </div>
+
+<script>
+function toggleReviews() {
+    const popup = document.getElementById("reviews-popup");
+    popup.style.display = (popup.style.display === "block") ? "none" : "block";
+}
+</script>
+</body>
+
+    </html>
