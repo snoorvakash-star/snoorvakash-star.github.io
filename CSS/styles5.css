@@ -1,0 +1,287 @@
+body{
+    background-image: url(Photos/banner3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body, html{
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.logo-container{
+    position: fixed;
+    top: 40px;
+    right: 10px;
+    z-index: 999;
+}
+.Logo{
+    width: 100px;
+    height: auto;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(1, 74, 1);
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    justify-content: center;
+}
+ul li a{
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ul li a:hover {
+background-color: black;
+margin-top: 0%;
+}
+.a2{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    width: 100%;
+}
+.a2 a{
+    text-decoration: none;
+    padding: 10px 14px;
+    display: inline-block;
+}
+.a2 a:hover{
+    background-color: black;
+    color: white;
+}
+.Previous{
+    background-color: #255119;
+    color: white;
+} 
+.contact-wrapper {
+    margin-top: 50px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    background: rgba(255,255,255,0.45);
+    padding: 40px;
+    border-radius: 20px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+ 
+.contact-wrapper h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #1f3b1f;
+    letter-spacing: 2px;
+}
+
+
+.contact-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    transition: 0.3s;
+} 
+.contact-box:hover {
+    transform: scale(1.03);
+    background: #f2f7f2;
+}
+.icon {
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.contact-box p {
+    font-size: 18px;
+    margin: 0;
+    color: #2f2f2f;
+}
+.contact-linl{
+    font-size: 18px;
+    color: #2d671e;
+    text-decoration: none;
+}
+.contact-linl:hover{
+    text-decoration: underline;
+}
+
+.contact-box {
+    width: 200px;
+    margin: 120px auto;
+    padding: 30px 25px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(7px);
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.contact-box h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: #1c3f1e;
+}
+
+.map-fixed {
+    position: fixed;
+    bottom: 400px;
+    left: 50px;
+    z-index: 999;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+
+.subtitle {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #333;
+    opacity: 0.8;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #e8f1e8;
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1c3f1e;
+    margin-bottom: 15px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.item:hover {
+    background: #d7e8d7;
+    transform: scale(1.03);
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+}
+.Photos{
+    width: 350px;
+    height: auto;
+    position: fixed;
+    top: 150px;
+    right: 85px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);  
+}
+.Photos2{
+    width: 350px;
+    height: auto;
+    position: fixed;
+    top: 350px;
+    right: 150px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.Photos3{
+    width: 350px;
+    height: auto;
+    position: fixed;
+    top: 550px;
+    right: 85px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+
+
+.review-button {
+    position: fixed;
+    bottom: 120px;
+    left: 40px;
+    background: #4c0909;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: 0.2s;
+    z-index: 999;
+}
+
+.review-button:hover {
+    transform: scale(1.05);
+}
+
+
+.reviews-popup {
+    position: fixed;
+    bottom: 100px;
+    left: 40px;
+    width: 280px;
+    max-height: 320px;
+    background: rgba(255,255,255,0.95);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    display: none;   
+    overflow-y: auto;
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+
+.reviews-popup h3 {
+    margin-top: 0;
+    color: #244e2a;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.review-item {
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.review-item p {
+    margin: 5px 0;
+}
+
+.review-item span {
+    font-size: 13px;
+    color: #333;
+    float: right;
+}
+
+.close-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #244e2a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+

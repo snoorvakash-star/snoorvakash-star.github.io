@@ -1,0 +1,333 @@
+body{
+    background-image: url(Photos/banner3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body, html{
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.logo-container{
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    z-index: 999;
+}
+.Logo{
+    width: 90px;
+    height: auto;
+}
+
+.h3{
+    font-style: italic;
+    color: rgb(27, 25, 25);
+    text-align: center;
+    background-color: antiquewhite;
+    padding-top: 395px;
+    font-size: x-large;
+    display: inline-block;
+    position: fixed;
+    width: 500px;
+    margin: 0;
+    padding: 0;
+    top: 10%;
+    left: 0%;
+    justify-content: center;
+    border-radius: 10px;
+}
+.Center{
+    font-style: normal;
+    color: rgb(23, 22, 22);
+    background-color: rgb(244, 238, 229);
+    text-align: center;
+    padding-top: 200px;
+    font-size: large;
+    display: inline-block;
+    position: fixed;
+     width: 700px;
+    z-index: 999;
+    margin: 10px 0;
+    padding: 0;
+   top: 15%;
+   left: 0;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.staff{
+    font-style: normal;
+    color: rgb(23, 22, 22);
+    background-color: rgb(244, 238, 229);
+    text-align: center;
+    padding-top: 200px;
+    font-size: large;
+    display: inline-block;
+    position: fixed;
+     width: 600px;
+    z-index: 999;
+    margin: 0;
+    padding: 12px 12px;
+   top: 15%;
+   left: 53%;
+    justify-content: center;
+    border-radius: 10px;
+}
+.h32{
+   font-style: italic;
+    color: rgb(27, 25, 25);
+    text-align: center;
+     background-color: rgb(244, 238, 229);
+    padding-top: 395px;
+    font-size: x-large;
+    display: inline-block;
+    position: fixed;
+    width: 550px;
+    margin: 0;
+    padding: 8px 12px;
+    top: 10%;
+    left: 53%;
+    justify-content: center; 
+    border-radius: 12px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(1, 74, 1);
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  justify-content: center;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #0f0e0e;
+  margin-top: 0%;
+}
+.Cards{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 20px;
+    padding-top: 15%;
+}
+
+.staffs-card {
+    background: white;
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.staffs-card:hover {
+    transform: scale(1.05);
+}
+
+.staffs-card h3 {
+    margin-bottom: 10px;
+    color: #2e5d34;
+}
+
+.staffs-card p {
+    color: #3b6f42;
+}
+
+.Nature{
+    width: 20%;
+    height: auto;
+    left: 20%;
+    margin-left: 65%;
+    border-style: outset;
+}
+
+.a2 {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px 0;
+  width: 100%;
+}
+.a2 a{
+    text-decoration: none;
+    padding: 10px 14px;
+    display: inline-block;
+}
+
+.a2 a:hover {
+  background-color: rgb(8, 4, 4);
+  color: rgb(255, 255, 255);
+}
+
+.Previous {
+  background-color: #1d4213;
+  color: rgb(255, 255, 255);
+}
+
+.Next {
+  background-color: #14432b;
+  color: rgb(255, 253, 253);
+}
+
+
+.review-button {
+    position: fixed;
+    bottom: 120px;
+    left: 40px;
+    background: #4c0909;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: 0.2s;
+    z-index: 999;
+}
+
+.review-button:hover {
+    transform: scale(1.05);
+}
+
+
+.reviews-popup {
+    position: fixed;
+    bottom: 100px;
+    left: 40px;
+    width: 280px;
+    max-height: 320px;
+    background: rgba(255,255,255,0.95);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    display: none;   
+    overflow-y: auto;
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+
+.reviews-popup h3 {
+    margin-top: 0;
+    color: #244e2a;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.review-item {
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.review-item p {
+    margin: 5px 0;
+}
+
+.review-item span {
+    font-size: 13px;
+    color: #333;
+    float: right;
+}
+
+.close-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #244e2a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hyper {
+   margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+     background-color: #4c0909;
+    color: #f4f4f4;
+    padding: 12px 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-left: 40%;
+    margin-top: 18%;
+}
+
+.hyper1{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    margin-left: 40%;
+}
+.hyper1 a{
+    background-color: #315e24;
+    color: #f4f4f4;
+    padding: 12px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.hyper1 a:hover{
+    background-color: rgb(94, 36, 36);
+}
+
+
+
+
+
+ .Staff1{
+    width: 250px;
+    height: auto;
+    position: fixed;
+    top: 500px;
+    right: 600px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+ }
+ .Staff2{
+    width: 250px;
+    height: auto;
+    position: fixed;
+    top: 500px;
+    right: 300px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+ }
+ .Staff3{
+    width: 250px;
+    height: auto;
+    position: fixed;
+    top: 500px;
+    right: 35px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+ }
+ .center{
+ width: 350px;
+    height: auto;
+    position: fixed;
+    top: 500px;
+    right: 1350px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+ }

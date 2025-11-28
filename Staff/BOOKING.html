@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BOOKING</title>
+        <link href="CSS/styles4.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div>
+            <div class="Logo-container">
+               <img class="Logo" src="CSS/Photos/Logo.jpeg" alt="LOGO">
+            </div>
+            
+<div class="booking-layout">
+    
+
+    <!-- LEFT: SERVICES -->
+    <div class="left-col">
+        <div class="label-icon">
+            <span class="icon-red">&#9679;</span> SELECT SERVICES:
+        </div>
+
+        <!-- Land-Based -->
+        <div class="service-box service-toggle" data-target="land-options">
+            <span class="dot"></span> Land-Based
+        </div>
+        <div id="land-options" class="service-options">
+            <p>• Hillwalking</p>
+            <p>• Archery</p>
+            <p>• Orienteering</p>
+            <p>• Axe Throwing</p>
+        </div>
+
+        <!-- Water-Based -->
+        <div class="service-box service-toggle" data-target="water-options">
+            <span class="dot"></span> Water-Based
+        </div>
+        <div id="water-options" class="service-options">
+            <p>• Kayaking</p>
+            <p>• Canoeing</p>
+            <p>• Poweboating</p>
+        </div>
+
+        <!-- Rope-Based -->
+        <div class="service-box service-toggle" data-target="rope-options">
+            <span class="dot"></span> Rope-Based
+        </div>
+        <div id="rope-options" class="service-options">
+            <p>• Climbing</p>
+            <p>• Pole Climb</p>
+            <p>• Abseiling</p>
+        </div>
+
+    </div>
+
+    <!-- CENTER: TIME TABLE -->
+    <div class="center-col">
+        <div class="label-icon">
+            <span class="icon-red">&#9679;</span> SELECT TIME:
+        </div>
+
+        <table class="time-table selectable-time">
+            
+            <tr>
+                <td class="time-cell">09:30</td>
+                <td class="time-cell">17:00</td>
+            </tr>
+            <tr>
+                <td class="time-cell">10:00</td>
+                <td class="time-cell">18:00</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- RIGHT: DATE -->
+    <div class="right-col">
+        <div class="label-icon">
+            <span class="icon-red">&#9632;</span> SELECT DATE:
+        </div>
+        <input type="date" class="date-input">
+    </div>
+
+</div>
+
+<div class="review-button" onclick="toggleReviews()">
+    ⭐ Customer Comments
+</div>
+
+
+<div id="reviews-popup" class="reviews-popup">
+    <h3>Customer Comments</h3>
+
+        <div class="review-item">
+        <p>“Five stars, it was great.”</p>
+        <span>— Joe, aged 14</span>
+    </div>
+
+    <div class="review-item">
+        <p>“I was really scared about the abseiling but the instructor Mike was really encouraging and helped me do it, thanks Mike.”</p>
+        <span>— Sophie, aged 10</span>
+    </div>
+
+   
+
+    <button class="close-btn" onclick="toggleReviews()">Close</button>
+</div>
+
+
+
+
+
+            <!--This is nav bar-->
+            <div>
+        <nav>
+            <ul>
+                <li><a href="Home page.html">HOME</a></li>
+                <li><a href="Aboutus.html">ABOUT US</a></li>
+                <li><a href="Our Activities.html">OUR ACTIVITIES</a></li>
+                <li><a href="CONTACT US.html">CONTACT US</a></li>
+            </ul>
+            </nav>
+        </div>
+        <div class="a2">
+            <a class="Previous" href="Aboutus.html">Previous</a>
+            <a class="Next" href="CONTACT US.html">Next</a>
+        </div>
+    
+    </div>
+
+    </body>
+
+
+
+
+<script>
+    // Toggle Activity Options
+    document.querySelectorAll(".service-toggle").forEach(item => {
+        item.addEventListener("click", () => {
+            const target = document.getElementById(item.dataset.target);
+
+            if (target.classList.contains("active")) {
+                target.classList.remove("active");
+            } 
+            else {
+                document.querySelectorAll(".service-options").forEach(opt => {
+                    opt.classList.remove("active");
+                });
+                target.classList.add("active");
+            }
+        });
+    });
+
+    // Selectable Time Cells
+    document.querySelectorAll(".time-cell").forEach(cell => {
+        cell.addEventListener("click", () => {
+
+            document.querySelectorAll(".time-cell").forEach(c => {
+                c.classList.remove("selected");
+            });
+
+            cell.classList.add("selected");
+            console.log("Selected Time:", cell.textContent);
+        });
+    });
+    // Selectable service options
+document.querySelectorAll(".service-options p").forEach(option => {
+    option.addEventListener("click", () => {
+        const parent = option.parentElement;
+
+        // Remove selection from siblings
+        parent.querySelectorAll("p").forEach(p => p.classList.remove("selected"));
+
+        // Select clicked
+        option.classList.add("selected");
+
+        console.log("Selected activity option:", option.textContent);
+    });
+});
+</script>
+
+
+<script>
+function toggleReviews() {
+    const popup = document.getElementById("reviews-popup");
+    popup.style.display = (popup.style.display === "block") ? "none" : "block";
+}
+</script>
+
+    </html>

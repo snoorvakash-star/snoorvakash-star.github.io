@@ -1,0 +1,291 @@
+body{
+    background-image: url(Photos/banner2.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body, html{
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.Logo-container {
+   position: fixed;
+   top: 30px;
+   right: 10px;
+   z-index: 999;
+}
+.Logo{
+    width: 90px;
+    height: auto;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(1, 74, 1);
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    justify-content: center;
+}
+ul li a{
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ul li a:hover {
+background-color: black;
+margin-top: 0%;
+}
+.a2{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: o;
+    padding: 10px 0;
+    width: 100%;
+}
+.a2 a{
+    text-decoration: none;
+    padding: 10px 14px;
+    display: inline-block;
+}
+.a2 a:hover{
+    background-color: black;
+    color: white;
+}
+.Previous{
+    background-color: #255119;
+    color: white;
+}
+.Next{
+    background-color: #295b1b;
+    color: white;
+}
+
+.booking-layout {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.left-col {
+    width: 30%;
+    margin-top: 3%;
+}
+.right-col{
+    width: 30%;
+    padding-right: 10%;
+    margin-top: 3%;
+}
+.center-col{
+    width: 400px;
+    position: absolute;
+    right: 73%;
+    top: 400px;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.service-box{
+    border: 2px solid #333;
+    padding: 12px 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.service-box:hover{
+    background: #f5f5f5;
+}
+
+.dot{
+    width: 12px;
+    height: 12px;
+    background: rgb(77, 1, 1);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.service-options {
+    display: none;
+    margin-left: 20px;
+    margin-top: 8px;
+    font-size: 15px;
+    background: #ffffffcc;
+    border-left: 3px solid #333;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.service-options p {
+    margin: 4px 0;
+}
+
+.service-options.active {
+    display: block;
+}
+
+.label-icon{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    gap: 8px;
+}
+
+.icon-red{
+    color: rgb(202, 3, 3);
+    font-size: 20px;
+}
+
+.date-input{
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    width: 100%;
+    background: white;
+}
+
+.time-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.time-table th,
+.time-table td{
+    border: 1px solid #666;
+    padding: 8px 12px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.time-cell {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.time-cell:hover {
+    background: #eee;
+}
+
+.time-cell.selected {
+    background: #d33;
+    color: white;
+    font-weight: bold;
+}
+
+.center-col {
+    margin-top: 40px;
+}
+.service-options p {
+    margin: 4px 0;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.service-options p:hover {
+    background: #eee;
+}
+
+.service-options p.selected {
+    background: #d33;
+    color: white;
+    font-weight: bold;
+}
+
+
+.review-button {
+    position: fixed;
+    bottom: 120px;
+    left: 40px;
+    background: #4c0909;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: 0.2s;
+    z-index: 999;
+}
+
+.review-button:hover {
+    transform: scale(1.05);
+}
+
+
+.reviews-popup {
+    position: fixed;
+    bottom: 100px;
+    left: 40px;
+    width: 280px;
+    max-height: 320px;
+    background: rgba(255,255,255,0.95);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    display: none;   
+    overflow-y: auto;
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+
+.reviews-popup h3 {
+    margin-top: 0;
+    color: #244e2a;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.review-item {
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.review-item p {
+    margin: 5px 0;
+}
+
+.review-item span {
+    font-size: 13px;
+    color: #333;
+    float: right;
+}
+
+.close-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #244e2a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Activities</title>
+    <link href="CSS/styles3.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div class="Logo-container">
+        <img class="Logo" src="CSS/Photos/Logo.jpeg" alt="LOGO">
+    </div>
+
+    <div class="category-buttons">
+        <button onclick="showCategory('land')" class="active-btn">Land Based Activities</button>
+        <button onclick="showCategory('water')">Water Based Activities</button>
+        <button onclick="showCategory('rope')">Rope Based Activities</button>
+    </div>
+
+    <div id="land" class="category-box">
+        <div class="Act-card">
+            <p class="Act-text">
+                <strong>1. Hillwalking</strong><br>
+                From short walks around the site to Munro-bagging expeditions, Lochquarry has it all!
+                Walks can be tailored to suit any age or experience and can last from 1 hour to all-day adventures.<br>
+                Max group size 12 — Ages 6+<br><br>
+
+                <strong>2. Archery</strong><br>
+                Are you the next Robin Hood? Learn to hold a bow and fire an arrow and take part in fun competitions.<br>
+                Max group size 6 — Ages 6+<br><br>
+
+                <strong>3. Orienteering</strong><br>
+                Set in the centre's grounds, find all the markers and return on time to show off your navigation skills.<br>
+                Groups of 2+ — Ages 6+<br><br>
+
+                <strong>4. Axe Throwing</strong><br>
+                Travel back to Viking times and try hitting the target — maybe even a bullseye!<br>
+                Max group size 6 — Ages 10+
+            </p>
+        </div>
+    </div>
+
+    <div id="water" class="category-box">
+        <div class="Act-card">
+            <p class="Act-text">
+                <strong>1.Kayaking</strong><br>
+                Have a go at paddling, rolling and rafting in one of our brand new kayaks.<br>
+               Max group size 8.<br>
+            Ages 8+<br><br>
+
+            <strong>2.Canoeing</strong>
+           Work single-handedly or in pairs to canoe the length of Lochquarry. You can even <br>
+           take a picnic with you and explore some of the Loch’s islands.<br>
+          Max group size 8 boats (up to 16 people).<br>
+          Ages 6+<br><br>
+
+          <strong>3.Powerboating</strong>
+          Take control of one of the Centre’s two RIBs out on Lochquarry and try your hand<br>
+          powerboating.<br>
+          Max group size 6.
+          Ages 12+<br>
+            </p>
+        </div>
+    </div>
+
+    <div id="rope" class="category-box">
+        <div class="Act-card">
+            <p class="Act-text">
+                <strong>1.Climbing</strong><br>
+                 Scale the highs of one of the local quarry slabs.<br>
+                 Max group size 8.<br>
+                Ages 8+<br><br>
+
+                <strong>2.Abseiling</strong>
+                Take the scary step and abseil from the top of one of the local quarry slabs.<br>
+                There is a lovely view... if you are brave enough to look down!<br>
+                Max group size 8.<br>
+                Ages 8+<br><br>
+
+                <strong>3.Pole climb</strong>
+                Ever wondered how telephone engineers get to the top of the telephone poles? Well,<br>
+                here’s your chance to find out.<br>
+                group size 8.<br>
+                Ages 8+
+            </p>
+        </div>
+    </div>
+   
+
+<div>
+<div class="review-button" onclick="toggleReviews()">
+    ⭐ Customer Comments
+</div>
+
+
+<div id="reviews-popup" class="reviews-popup">
+    <h3>Customer Comments</h3>
+    <div class="review-item">
+        <p>“I would definitely come back.”</p>
+        <span>— Kelly, aged 9</span>
+    </div>
+
+    <div class="review-item">
+        <p>“Thank you to all the staff who worked so hard, in awful weather, to make sure that all the pupils had an amazing experience.”</p>
+        <span>— Mrs Kahn, Hillend Primary School</span>
+    </div>
+    <button class="close-btn" onclick="toggleReviews()">Close</button>
+</div>
+
+
+</div>
+
+ <div>
+        <p class="Safety">Find more information about official UK guidelines, visit:</p>
+    </div>
+    <div class="hyper">
+        <a href="https://www.hse.gov.uk/">Safety</a>
+    </div>
+
+
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Aboutus.html">ABOUT US</a></li>
+            <li><a href="BOOKING.html">BOOKING</a></li>
+            <li><a href="CONTACTUS.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <div class="a2">
+        <a class="Previous" href="Aboutus.html">Previous</a>
+        <a class="Next" href="BOOKING.html">Next</a>
+    </div>
+    <img class="Hillwalking" src="CSS/Photos/10.avif" alt="Hillwalking">
+    <img class="Powerboating" src="CSS/Photos/3.jpg" alt="Powerboating">
+    <img class="Climbing" src="CSS/Photos/1.jpg" alt="Climbing">
+
+
+
+<script>
+function showCategory(name) {
+    const categories = ['land', 'water', 'rope'];
+    categories.forEach(cat => {
+        document.getElementById(cat).style.display = 'none';
+        document.querySelector(`button[onclick="showCategory('${cat}')"]`).classList.remove('active-btn');
+    });
+    document.getElementById(name).style.display = 'flex';
+    document.querySelector(`button[onclick="showCategory('${name}')"]`).classList.add('active-btn');
+}
+
+showCategory('land');
+</script>
+
+
+
+
+<script>
+function toggleReviews() {
+    const popup = document.getElementById("reviews-popup");
+    popup.style.display = (popup.style.display === "block") ? "none" : "block";
+}
+</script>
+</body>
+</html>
